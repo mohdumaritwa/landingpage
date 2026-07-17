@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Earn Factory</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Join Telegram</title>
 
+<!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;
-n=f.fbq=function(){
-n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)
-};
+n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;
 n.push=n;
 n.loaded=!0;
@@ -18,118 +18,119 @@ n.version='2.0';
 n.queue=[];
 t=b.createElement(e);
 t.async=!0;
-t.src='https://connect.facebook.net/en_US/fbevents.js';
+t.src=v;
 s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s);
-}(window,document,'script');
+}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init','1355860546644992');
 fbq('track','PageView');
 </script>
 
 <style>
-body{
+
+*{
 margin:0;
-background:#0b1220;
-color:#fff;
-font-family:Arial,sans-serif;
-text-align:center;
-padding:25px;
-}
-
-.box{
-max-width:420px;
-margin:auto;
-background:#141d2d;
-padding:25px;
-border-radius:18px;
-box-shadow:0 0 20px rgba(0,0,0,.4);
-}
-
-.logo{
-width:120px;
-height:120px;
-border-radius:50%;
-display:block;
-margin:0 auto 20px;
-border:4px solid #FFD700;
-}
-
-h1{
-color:#00d4ff;
-margin:10px 0;
-}
-
-p{
-color:#ddd;
-}
-
-ul{
-list-style:none;
 padding:0;
-line-height:34px;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-.tg{
-display:block;
-background:#229ED9;
-color:#fff;
-text-decoration:none;
-padding:18px;
-border-radius:50px;
-font-size:22px;
-font-weight:bold;
-margin:20px 0;
+body{
+
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+/* Telegram Style Background */
+
+background:
+linear-gradient(rgba(190,230,165,.55),rgba(120,210,255,.45)),
+url("https://telegram.org/img/tgme/pattern.svg");
+
+background-size:420px;
+
 }
 
-.wa{
-display:inline-block;
-background:#25D366;
-color:#fff;
-text-decoration:none;
-padding:10px 20px;
+.card{
+
+width:92%;
+max-width:430px;
+height:650px;
+
+background:#fff;
+
 border-radius:30px;
-font-size:15px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.18);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
 }
 
-small{
-display:block;
-color:#aaa;
-margin-top:15px;
+.join{
+
+width:82%;
+height:80px;
+
+border:none;
+
+border-radius:50px;
+
+background:linear-gradient(180deg,#32A8FF,#1487F3);
+
+color:#fff;
+
+font-size:30px;
+
+font-weight:700;
+
+cursor:pointer;
+
+box-shadow:0 10px 25px rgba(20,135,243,.35);
+
+transition:.25s;
+
 }
+
+.join:hover{
+
+transform:scale(1.03);
+
+}
+
 </style>
+
 </head>
 
 <body>
 
-<div class="box">
+<div class="card">
 
-<img src="logo.png.jpg" alt="AR Profit Daily Logo" class="logo">
+<button class="join" onclick="joinTelegram()">
 
-<h1>📈 Earn Factory</h1>
+JOIN TELEGRAM
 
-<p>Join our Telegram community for regular updates and discussions.</p>
-
-<ul>
-<li>✅ Private Community</li>
-<li>✅ Regular Updates</li>
-<li>✅ Instant Notifications</li>
-<li>✅ Active Members</li>
-</ul>
-
-<a class="tg"
-href="https://telegram.me/+XwVsqDW48943MzA1"
-target="_blank"
-onclick="fbq('track','Lead')">
-🚀 JOIN TELEGRAM CHANNEL
-</a>
-
-
-<small>
-For informational purposes only. Please use your own judgment before acting on any information.
-</small>
+</button>
 
 </div>
+
+<script>
+
+function joinTelegram(){
+
+fbq('track','Lead');
+
+window.location.href="https://t.me/+XwVsqDW48943MzA1";
+
+}
+
+</script>
 
 </body>
 </html>
