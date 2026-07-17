@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Join Telegram</title>
 
 <!-- Meta Pixel -->
@@ -45,13 +47,13 @@ display:flex;
 justify-content:center;
 align-items:center;
 
-/* Telegram Style Background */
-
 background:
-linear-gradient(rgba(190,230,165,.55),rgba(120,210,255,.45)),
+linear-gradient(rgba(178,229,181,.45),rgba(129,212,250,.35)),
 url("https://telegram.org/img/tgme/pattern.svg");
 
 background-size:420px;
+
+overflow:hidden;
 
 }
 
@@ -59,32 +61,38 @@ background-size:420px;
 
 width:92%;
 max-width:430px;
-height:650px;
+height:680px;
 
-background:#fff;
+background:white;
 
-border-radius:30px;
-
-box-shadow:0 15px 40px rgba(0,0,0,.18);
+border-radius:35px;
 
 display:flex;
 justify-content:center;
 align-items:center;
 
+box-shadow:
+0 20px 60px rgba(0,0,0,.15);
+
 }
 
 .join{
 
+display:flex;
+align-items:center;
+justify-content:center;
+gap:18px;
+
 width:82%;
-height:80px;
+height:82px;
 
 border:none;
 
-border-radius:50px;
+border-radius:55px;
 
-background:linear-gradient(180deg,#32A8FF,#1487F3);
+background:linear-gradient(180deg,#35AEFF,#1788F4);
 
-color:#fff;
+color:white;
 
 font-size:30px;
 
@@ -92,7 +100,10 @@ font-weight:700;
 
 cursor:pointer;
 
-box-shadow:0 10px 25px rgba(20,135,243,.35);
+box-shadow:
+0 10px 25px rgba(24,136,244,.35);
+
+animation:pulse 2s infinite;
 
 transition:.25s;
 
@@ -100,7 +111,30 @@ transition:.25s;
 
 .join:hover{
 
-transform:scale(1.03);
+transform:scale(1.05);
+
+}
+
+.join img{
+
+width:34px;
+height:34px;
+
+}
+
+@keyframes pulse{
+
+0%{
+box-shadow:0 0 0 0 rgba(23,136,244,.45);
+}
+
+70%{
+box-shadow:0 0 0 18px rgba(23,136,244,0);
+}
+
+100%{
+box-shadow:0 0 0 0 rgba(23,136,244,0);
+}
 
 }
 
@@ -114,6 +148,8 @@ transform:scale(1.03);
 
 <button class="join" onclick="joinTelegram()">
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">
+
 JOIN TELEGRAM
 
 </button>
@@ -126,7 +162,11 @@ function joinTelegram(){
 
 fbq('track','Lead');
 
+setTimeout(function(){
+
 window.location.href="https://t.me/+XwVsqDW48943MzA1";
+
+},250);
 
 }
 
